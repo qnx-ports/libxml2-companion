@@ -1,6 +1,6 @@
 pkgname=libxml2
 pkgver=2.13.9
-pkgrel=3
+pkgrel=${pkgrel:-0}
 pkgdesc="XML parsing library, version 2"
 url="https://gitlab.gnome.org/GNOME/libxml2"
 arch="all"
@@ -65,6 +65,7 @@ utils() {
     amove usr/bin
 }
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 62d4813860124c969f204aaf33b497105dbc32a6c5655f5a86168743660e10987d687d7e5e7ee49fdfdeb8f6ad9fa4503f81fcce2e4d459094895f02436d1b13  libxml2-2.13.9.tar.xz
 "
